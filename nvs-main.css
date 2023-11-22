@@ -1,0 +1,912 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Lato', sans-serif;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: normal;
+   max-width: 1600px;
+   margin: 0 auto;
+   background: #181818;
+   color: #fff;
+}
+.container{
+   width: 1200px;
+   position: relative;
+   margin: 0 auto;
+   z-index: 1;
+}
+input:focus , select:focus , textarea:focus{
+   outline: 0;
+   border: 0;
+}
+li{
+   list-style: none;
+}
+a{
+   color: #000;
+   text-decoration: none;
+}
+ul, li{
+   padding: 0;
+   margin: 0;
+}
+img{
+   max-width: 100%;
+   display: inline-block;
+} 
+a:hover{
+   text-decoration: none;
+   color: #fff;
+}
+
+.flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.owl-carousel{
+   display:none;
+   width:100%;
+   -webkit-tap-highlight-color:transparent;
+   position:relative;
+   z-index:1
+}
+.owl-carousel .owl-stage{
+   position:relative;
+   -ms-touch-action:pan-Y;
+   -moz-backface-visibility:hidden
+}
+.owl-carousel .owl-stage:after{
+   content:".";
+   display:block;
+   clear:both;
+   visibility:hidden;
+   line-height:0;
+   height:0
+}
+.owl-carousel .owl-stage-outer{
+   position:relative;
+   overflow:hidden;
+   -webkit-transform:translate3d(0px, 0px, 0px)
+}
+.owl-carousel .owl-wrapper,.owl-carousel .owl-item{
+   -webkit-backface-visibility:hidden;
+   -moz-backface-visibility:hidden;
+   -ms-backface-visibility:hidden;
+   -webkit-transform:translate3d(0, 0, 0);
+   -moz-transform:translate3d(0, 0, 0);
+   -ms-transform:translate3d(0, 0, 0)
+}
+.owl-carousel .owl-item{
+   position:relative;
+   min-height:1px;
+   float:left;
+   -webkit-backface-visibility:hidden;
+   -webkit-tap-highlight-color:transparent;
+   -webkit-touch-callout:none
+}
+.owl-carousel .owl-item img {
+   display: block;
+   width: 100%;
+}
+.product-in-slider.owl-carousel .owl-item img {
+   width: 70%;
+}
+.owl-carousel .owl-nav.disabled,.owl-carousel .owl-dots.disabled{
+   display:none
+}
+.owl-carousel .owl-nav .owl-prev,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-dot{
+   cursor:pointer;
+   cursor:hand;
+   -webkit-user-select:none;
+   -khtml-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none
+}
+.owl-carousel.owl-loaded{
+   display:block
+}
+.owl-carousel.owl-loading{
+   opacity:0;
+   display:block
+}
+.owl-carousel.owl-hidden{
+   opacity:0
+}
+.owl-carousel.owl-refresh .owl-item{
+   visibility:hidden
+}
+.owl-carousel.owl-drag .owl-item{
+   -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none
+}
+.owl-carousel.owl-grab{
+   cursor:move;
+   cursor:grab
+}
+.owl-carousel.owl-rtl{
+   direction:rtl
+}
+.owl-carousel.owl-rtl .owl-item{
+   float:right
+}
+.no-js .owl-carousel{
+   display:block
+}
+.owl-carousel .animated{
+   animation-duration:1000ms;
+   animation-fill-mode:both
+}
+.owl-carousel .owl-animated-in{
+   z-index:0
+}
+.owl-carousel .owl-animated-out{
+   z-index:1
+}
+.owl-carousel .fadeOut{
+   animation-name:fadeOut
+}
+@keyframes fadeOut{
+   0%{
+       opacity:1
+   }
+   100%{
+       opacity:0
+   }
+}
+.owl-height{
+   transition:height 500ms ease-in-out
+}
+.owl-carousel .owl-item .owl-lazy{
+   opacity:0;
+   transition:opacity 400ms ease
+}
+.owl-carousel .owl-item img.owl-lazy{
+   transform-style:preserve-3d
+}
+.owl-carousel .owl-video-wrapper{
+   position:relative;
+   height:100%;
+   background:#000
+}
+.owl-carousel .owl-video-play-icon{
+   position:absolute;
+   height:80px;
+   width:80px;
+   left:50%;
+   top:50%;
+   margin-left:-40px;
+   margin-top:-40px;
+   background:url("owl.video.play.png") no-repeat;
+   cursor:pointer;
+   z-index:1;
+   -webkit-backface-visibility:hidden;
+   transition:transform 100ms ease
+}
+.owl-carousel .owl-video-play-icon:hover{
+   -ms-transform:scale(1.3, 1.3);
+   transform:scale(1.3, 1.3)
+}
+.owl-carousel .owl-video-playing .owl-video-tn,.owl-carousel .owl-video-playing .owl-video-play-icon{
+   display:none
+}
+.owl-carousel .owl-video-tn{
+   opacity:0;
+   height:100%;
+   background-position:center center;
+   background-repeat:no-repeat;
+   background-size:contain;
+   transition:opacity 400ms ease
+}
+.owl-carousel .owl-video-frame{
+   position:relative;
+   z-index:1;
+   height:100%;
+   width:100%
+}
+.owl-prev {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/78c0caad-aff6-424e-aa65-062af78ad79e.png) center no-repeat;
+   width: 46px;
+   height: 41px;
+   position: absolute;
+   top: 40%;
+   left: 0;
+   right: 60px;
+   font-size: 0;
+   bottom: auto;
+   margin: auto;
+   transform: rotate(-180deg);
+   background-size: 70% 70%;
+  
+}
+.owl-next {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/78c0caad-aff6-424e-aa65-062af78ad79e.png) center no-repeat;
+   width: 46px;
+   height: 41px;
+   position: absolute;
+   top: 40%;
+   right: 0;
+   font-size: 0;
+   bottom: auto;
+   margin: auto;
+   left: 60px;
+   background-size: 70% 70%;
+}
+.owl-prev.disabled , .owl-next.disabled{
+   opacity: 0.1;
+}
+.owl-dots {
+   position: absolute;
+   bottom: -38px;
+   width: 100%;
+   text-align: center;
+}
+.owl-dots .owl-dot{
+   background:#777777;
+   width:14px;
+   height:14px;
+   display:inline-block;
+   z-index:2;
+   position:relative;
+   border-radius:50%;
+   margin:0 5px
+}
+.owl-dots .owl-dot.active{
+   background: #ED2228;     
+}
+.logo {
+   width: 150px;
+   margin: 20px 0;
+   float: right;
+}
+.clear{
+   clear: both;
+}
+nav li {
+   display: inline-block;
+   position: relative;
+   padding: 0;
+   text-transform: uppercase;
+   margin-right: 10px;
+   margin-bottom: 15px;
+}
+nav li:last-of-type{
+   margin-right: 0;
+}
+nav li ul {
+   position: absolute;
+   width: 124px;
+   right: 0;
+   top: 32px;
+   text-align: right;
+   background: #000;
+   display: none;
+   z-index: 999;
+}
+nav li ul li{
+   /* text-align: right; */
+   padding: 5px;
+}
+nav li:hover > ul{
+   display: block;
+}
+nav li.active a,nav li:hover a{   
+     
+   background: #000;
+}
+nav{
+   text-align: right;
+}
+nav a {
+   color: #fff;
+   padding: 10px 23px;
+   line-height: 1;
+   display: block;
+   padding: 13px 9px;
+   border: solid 1px transparent;
+   font-size: 16px;
+   margin-bottom: 0px;
+}
+/* nav li:last-of-type a{
+   padding-right: 0;
+} */
+.banner{
+   width: 100%;
+   overflow: hidden;
+}
+.banner .container,.inner-banner .container {
+   position: absolute;
+   transform: translateY(-50%);
+   color: #fff;
+   z-index: 9;
+   top: 50%;
+   right: 0;
+   left: 0;
+   margin: auto;
+}
+.banner .container h4, .inner-banner .container h4 {
+   font-size: 42px;
+   max-width: 700px;
+   font-weight: 600;
+   line-height: 50px;
+}
+.banner-txt {
+   font-size: 30px;
+   max-width: 700px;
+   line-height: 60px;
+}
+.qoat {
+   font-size: 30px;   padding: 75px;
+   max-width: 965px;
+   position: relative;
+   font-weight: 600;
+   text-align: center;
+}
+.qoat p{
+   position: relative;
+}
+/* .qoat p:after {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/7daaf217-55df-44b3-adff-bb0147e0ee5f.png) 0 0 no-repeat;
+   content: "";
+   width: 60px;
+   position: absolute;
+   top: -19px;
+   left: -56px;
+   height: 42px;
+   background-size: 100% 100%;
+} */
+/* .qoat p:before {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/7daaf217-55df-44b3-adff-bb0147e0ee5f.png) 0 0 no-repeat;
+   content: "";
+   width: 60px;
+   position: absolute;
+   bottom: -19px;
+   right: -56px;
+   height: 42px;
+   background-size: 100% 100%;
+} */
+.exp-most {
+   position: relative;
+   background: #000;
+   padding: 50px 0 100px 0;
+   min-height: 452px;
+}
+.exp-most:after {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/7718e20c-87f5-4b66-bf15-488872456ba8.png) 0 0 no-repeat;
+   content: "";
+   width: 400px;
+   height: 260px;
+   position: absolute;
+   top: 100px;
+   right: 0;
+   background-size: 100% 100%;
+}
+.exp-most h2 {
+   font-size: 30px;
+   padding: 0 27px;
+   padding-top: 91px;
+   font-weight: 400;
+   margin-bottom: 14px;
+   max-width: 65%;
+   text-transform: capitalize;
+}
+.exp-most h3 {
+   font-size: 40px;
+   padding: 0 27px;
+   padding-top: 0;
+   margin-bottom: 14px;
+   font-weight: 400;
+   background: #105a91;
+   padding: 9px;
+   display: inline-block;
+   margin-left: 28px;
+   margin-top: 17px;
+}
+/* .expl {
+   background: url(../images/link-line.png) left bottom no-repeat;
+   clear: both;
+   display: block;
+   color: #fff;
+   font-size: 29px;
+   font-weight: bold;
+   padding-bottom: 25px;
+   margin-top: 31px;
+   padding-left: 31px;
+} */
+.expl {
+   /* background: url(../images/link-line.png) left bottom no-repeat; */
+   clear: both;
+   display: inline-block;
+   color: #fff;
+   font-size: 18px;
+   font-weight: bold;
+   padding-bottom: 25px;
+   margin-top: 10px;
+   padding-left: 31px;
+   border: solid 1px;
+   width: auto;
+   padding: 10px 24px;
+   font-weight: 400;
+   border-radius: 0;
+   transition: all linear .3s;
+   margin-left: 25px;
+}
+.expl:hover{
+   background: #105a91;
+}
+.bring-effic {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/ec8e445b-37f2-49eb-8c62-a89585f344b1.jpg) 0 0 no-repeat;
+   margin: 40px auto;
+   padding: 150px 0;
+   position: relative;
+}
+
+.bring-effic h2 {
+   font-size: 30px;
+   font-weight: 400;
+   padding: 0 27px;
+   padding-top: 91px;
+   margin-bottom: 14px;
+   max-width: 70%;
+   text-transform: capitalize;
+}
+.bring-effic h3 {
+   font-size: 50px;
+   padding: 0 27px;
+   padding-top: 0;
+   margin-bottom: 14px;   
+   background: #105a91;
+   padding: 9px;
+   display: inline-block;
+   margin-left: 28px;
+   margin-top: 17px;
+}
+.bring-effic:after {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/bd596a8a-952b-444b-afc8-2b6c54e4095b.png) 0 0 no-repeat;
+   content: "";
+   width: 628px;
+   height: 250px;
+   right: 0;
+   position: absolute;
+   background-size: 100% 100%;
+   bottom: 0;
+}
+.offrening {
+   text-align: center;
+   padding: 30px 0;
+}
+.offrening li{
+   display: inline-block;
+   margin: 0 20px;
+}
+.offrening h3 {
+   font-weight: normal;
+   font-size: 30px;
+   text-transform: capitalize;
+   font-weight: 600;
+   margin-bottom: 31px;
+}
+footer {
+   background: #eeeeee;
+   padding: 0 0 24px;
+   color: #000 ;
+   font-size: 14px;
+}
+footer a{
+   color: #000 !important;
+}
+p.left{}
+p.left a{
+   color: #000;
+   font-size: 14px;
+}
+p.left span {
+   display: block;
+   color: #000;
+   margin-bottom: 6px;
+   font-size: 13px;
+}
+p.right a{
+   width: 40px;
+   margin: 0 3px;
+}
+.complete-networ {
+   padding: 50px 0;
+   /* width: 800px; */
+}
+.complete-networ h4 {
+   text-align: center;
+   font-size: 36px;
+   font-weight: normal;
+   position: relative;
+   margin-bottom: 65px;
+   margin-top: 80px;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.complete-networ h4:after {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/7daaf217-55df-44b3-adff-bb0147e0ee5f.png) 0 0 no-repeat;
+   content: "";
+   width: 60px;
+   height: 47px;
+   position: absolute;
+   left: 0;
+   top: -17px;
+   background-size: 100% 100%;
+}
+.complete-networ h4:before {
+   background: url(https://image.connect.canon.co.in/lib/fe3811737164047f711574/m/1/7daaf217-55df-44b3-adff-bb0147e0ee5f.png) 0 0 no-repeat;
+   content: "";
+   width: 60px;
+   height: 47px;
+   position: absolute;
+   right: 0;
+   bottom: -17px;
+   background-size: 100% 100%;
+   transform: rotate(180deg);
+}
+.text-center{
+   text-align: center;
+}
+.tab {
+   margin-top: 44px;
+}
+.tab-ul {
+   background: #fff;
+   color: #000;
+   padding: 15px;
+   border-radius: 9px;
+   margin-bottom: 30px;
+}
+.tab-ul li {
+   color: #555454;
+   font-size: 24px;
+   padding: 0 10px;
+   font-weight: 600;
+   width: 33.3%;
+   text-align: center;
+   border-right: 1px solid #555454;
+}
+.tab-ul li:last-child{
+   border-right: 0;
+}
+.c-txt {
+   width: 650px;
+   align-self: center;
+}
+.c-txt h2 {
+   font-size: 30px;
+   margin-bottom: 10px;
+   font-weight: 400;
+}
+.c-txt p{
+   line-height: 23px;
+}
+.c-img {
+   width: 360px;
+}
+.content li:nth-child(even) .c-txt {
+  order: 1;
+}
+.tab-ul li{position: relative;  cursor: pointer;}
+.tab .content li {
+   /* margin-bottom: 40px; */
+   border-bottom: 3px solid #2b2b2b;
+   padding: 50px 22px;
+   border-right: 3px solid #2b2b2b;
+}
+.tab-ul li.active:after {
+   background: #555454;
+   content: "";
+   position: absolute;
+   bottom: 0;
+   width: 80%;
+   height: 10px;
+   bottom: -17px;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
+/* .content li.active{
+   border-bottom:5px solid #555454;
+} */
+.content li:nth-child(even){
+   border-right: 0;
+   border-left: 3px solid #2b2b2b;
+}
+.all-img {
+   margin-top: 50px;
+}
+.start-btn {
+   width: 60px;
+   height: 60px;
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   top: 0;
+   cursor: pointer;
+   z-index: 999;
+   background: #000;
+   text-align: center;
+   padding-top: 10px;
+}
+.start-btn img {
+   width: 30px;
+   height: auto;
+}
+/* .start-btn img {
+   filter: grayscale(1);
+   transition:  all linear .3s;
+} */
+.start-btn:hover{
+   background: #105a91;
+}
+.startform {
+   width: 370px;
+   position: fixed;
+   height: 600px;
+   right: -370px;
+   bottom: 0;
+   top: 0;
+   margin: auto;
+   background: #105a91;
+   z-index: 999;
+   padding: 28px;
+   border-radius: 10px 0 0 10px;
+   transition: all ease 0.3s;
+}
+.startform h3 {
+   margin-bottom: 15px;
+}
+.startform li.full {
+   border: 0;
+   padding: 0;
+   font-size: 13px;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+.startform li.full p {
+   width: 92%;
+}
+.startform li.full a{
+   color:#fff;
+   text-decoration: underline;
+}
+.startform li input[type="checkbox"]{
+   width: auto;
+}
+.startform li.btn button:disabled, .startform li.btn button[disabled] {
+   cursor: not-allowed;
+   opacity: .3;
+}
+.startform.active{
+   right: 0;
+}
+.form-close {
+   width: 28px;
+   height: 28px;
+   position: absolute;
+   top: 27px;
+   right: 19px;
+   cursor: pointer;
+}
+.startform li {
+   border: 1px solid #fff;
+   margin: 9px 0;
+   padding: 1px 13px;
+   border-radius: 6px;
+}
+.startform li input, .startform li select {
+   background: none;
+   border: 0;
+   color: #fff;
+   width: calc(100% - 50px);
+   margin-left: 5px;
+   vertical-align: middle;
+   display: inline-block;
+}
+.startform li select , .startform li select option{
+   background: #105a91;
+   color: #fff;
+   margin-left: 0;
+}
+.startform li select option{
+   padding: 5px;
+}
+.startform li input::placeholder, .startform li select::placeholder,.startform li input::-moz-placeholder,.startform li select::-moz-placeholder{
+   color: #fff;
+   opacity: 1;
+}
+input::placeholder {
+   color: #fff;
+}
+.startform li span {
+   width: 40px;
+   vertical-align: middle;
+}
+.startform li.btn{
+   border: 0;
+   padding: 6px 0;
+}
+.startform li.btn button {
+   background: #181818;
+   color: #fff;
+   width: 100%;
+   border: 0;
+   padding: 12px;
+   text-transform: uppercase;
+   font-size: 18px;
+   cursor: pointer;
+}
+.bdiv {
+   width: 20%;
+   text-align: left;
+   /* padding: 21px; */
+   background: #fff;
+   overflow: hidden;
+   color: #000;
+   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   height: 235px;
+}
+.flip-card-front img {
+   width: 100%;
+}
+.flip-card-front a img{
+   width: auto;
+}
+.bdiv:nth-child(even)
+{
+   background: #3f3f3f;
+   color: #fff;
+}
+.bdiv h2 {
+   font-size: 16px;
+   margin-bottom: 9px;
+}
+.bdiv h2 sup{}
+.bdiv p {
+   font-size: 13px;
+   min-height: 35px;
+   line-height: 20px;
+}
+.bimg {
+   margin-bottom: 15px;
+}
+.flex-center{display: flex; flex-wrap: wrap; justify-content: center;}
+
+/* This container is needed to position the front and back side */
+.paddingnone .bdiv{ padding: 0;overflow: hidden;}
+.flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;   
+   
+}  
+
+
+ .flip-card-back{
+   background: #000000;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 15px;    
+   top: 0;
+   transition: all ease .6s;
+   left: -100%;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   flex-wrap: wrap;
+ }
+ .bdiv:nth-child(even) .flip-card-back{
+     left: auto;
+     right: -100%;
+   }
+ .bdiv:hover .flip-card-back{
+   left: 0;
+  
+ }
+ .bdiv:nth-child(even):hover .flip-card-back{
+     right: 0;
+     left: auto;
+ }
+ .flip-card-back:after {
+       position: absolute;
+       width: 90%;
+       height: 90%;
+       border: solid 1px #fff;
+       content: "";
+   }
+ .inner-banner{
+     width:100%;
+     position: relative;
+ }
+ .inner-banner img{
+     width:100%;
+     height: auto;
+ }
+ .owl-nav {
+   position: absolute;
+   bottom: 69px;
+   width: 1200px;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
+.temscon {
+   color: #fff;
+   margin-bottom: 15px;
+   background: #000;
+   width: 100%;
+   padding: 10px;
+   text-align: center;
+   font-size: 12px;
+}
+p.left {
+   color: #000;
+   font-size: 12px;
+}
+
+.paddingnone .bdiv h2 {
+   font-size: 16px;
+   margin-bottom: 0;
+   /* padding: 14px; */
+   font-weight: normal;
+}
+.flip-card-back , .flip-card-front{
+   padding: 14px;
+}
+.owl-carousel .owl-item img.res-show , .inner-banner img.show-res{
+   display: none;
+}
+.heading {
+   text-align: center;
+   padding-top: 0;
+   font-size: 35px;
+   margin-top: 15px;
+   margin-bottom: 35px;
+}
+header.header {
+   position: relative;
+   z-index: 9;
+}
+.thanks-page {
+   background: #fff;
+   width: 100%;
+   padding: 50px 0;
+   color: #000;
+}
+.thanks-page h3 {
+   font-weight: 400;
+   font-size: 56px;
+   margin: 26px 0;
+   opacity: .8;
+}
+.thanks-page p {
+   font-size: 24px;
+   line-height: 39px;
+}
+.thanks-page a {
+   background: #105a91;
+   color: #fff;
+   padding: 8px 18px;
+   display: inline-block;
+   margin-top: 18px;
+   font-size: 24px;
+}
+.owl-prev:hover,.owl-next:hover {
+   opacity: .7;
+}
