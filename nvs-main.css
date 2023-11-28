@@ -912,3 +912,14 @@ header.header {
 .owl-prev:hover,.owl-next:hover {
    opacity: .7;
 }
+
+#contactusForm .error {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #fa8071;
+    font-weight: 600;
+    letter-spacing: .3px;
+    text-transform: capitalize;
+    display: none
+}
+
