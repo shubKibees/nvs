@@ -628,18 +628,20 @@ p.right a{
    margin-top: 50px;
 }
 .start-btn {
-   width: 60px;
-   height: 60px;
-   position: fixed;
-   right: 0;
-   bottom: 0;
-   margin: auto;
-   top: 0;
-   cursor: pointer;
-   z-index: 999;
-   background: #000;
-   text-align: center;
-   padding-top: 10px;
+    width: 135px;
+    height: 57px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    top: 0;
+    cursor: pointer;
+    z-index: 999;
+    background: #000;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 .start-btn img {
    width: 30px;
